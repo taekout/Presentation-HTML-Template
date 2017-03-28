@@ -1,0 +1,38 @@
+ <html>
+<head class="ui-widget-content">
+    <script language="javascript" src="scripts/jquery.js"></script>
+    <script language="javascript">
+        $(document).ready(function () {
+
+            $('#textbox').hide();
+            $('#book').hide();
+            $('#book2').hide();
+            $('#clickme').click(function () {
+                $('#book').toggle(1000, function () {
+                    $('#book2').toggle(1000);
+                    $('#book2').animate({
+                        left: '+=50'
+                        marginTop: '+=50'
+                    });
+                });
+            });
+        });
+    </script>
+  <style>
+
+  td { color:blue; font-weight:bold; }
+  </style>
+</head>
+<body>
+
+<div id="clickme" style="cursor:pointer;">HAHA</div>
+<img id="book" src="book.png" alt="" width="100" height="123"
+  style="position: relative; left: 10px;" />
+<img id="book2" src="book2.png" alt="" width="100" height="123"
+  style="position: relative; left: 10px;" />
+
+<div id="textbox">
+<p>TExt test</p>
+</div>
+</body>
+</html>
